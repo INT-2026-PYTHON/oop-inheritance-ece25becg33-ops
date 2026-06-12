@@ -120,10 +120,12 @@ class Shape:
         raise NotImplementedError(
             "Child classes must override area()"
         )
+       
     def perimeter(self):
         raise NotImplementedError(
             "Child classes must override perimeter()"
         )
+       
     def describe(self):
         print(f"{self.name}: area={self.area()}, perimeter={self.perimeter()}")
 
@@ -131,8 +133,10 @@ class Circle(Shape):
     def __init__(self, radius):
         super().__init__("Circle")
         self.radius = radius
+       
     def area(self):
         return 3.14159 * self.radius * self.radius
+       
     def perimeter(self):
         return 2 * 3.14159 * self.radius
 
